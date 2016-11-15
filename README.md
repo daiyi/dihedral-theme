@@ -30,4 +30,4 @@ let me know if these instructions are confusing and I'll write out something mor
 
 this is a fork of [mint-y-dark-theme](https://github.com/linuxmint/mint-y-theme). build script forked from [zagortenay333](https://github.com/zagortenay333)!
 
-theme pbackground image](https://flic.kr/p/7EZZJQ) released under [creative commons](https://creativecommons.org/licenses/by-nc-nd/2.0).
+theme [background image](https://flic.kr/p/7EZZJQ) released under [creative commons](https://creativecommons.org/licenses/by-nc-nd/2.0).
