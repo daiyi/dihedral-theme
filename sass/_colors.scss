@@ -19,13 +19,13 @@ $destructive_color: #F04A50;
 $suggested_color: #4DADD4;
 
 //insensitive state derived colors
-$insensitive_fg_color: transparentize($fg_color, 0.55));
-$insensitive_bg_color: lighten($bg_color, 2%));
+$insensitive_fg_color: transparentize($fg_color, 0.55);
+$insensitive_bg_color: lighten($bg_color, 2%);
 
 $header_bg: red;
-@if($transparency=='true', $header_bg: transparentize(#2f343f, 0.03), $header_bg: #2f343f);
+$header_bg: if($transparency=='true', transparentize(#2f343f, 0.03), #2f343f);
 
-$header_bg_backdrop: lighten($header_bg, 1.5%)
+$header_bg_backdrop: lighten($header_bg, 1.5%);
 
 $header_border: darken($header_bg, 4%);
 
