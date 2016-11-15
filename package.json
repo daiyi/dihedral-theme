@@ -1,0 +1,25 @@
+{
+  "name": "dihedral",
+  "version": "0.0.1",
+  "description": "dark cinnamon theme",
+  "author": {
+    "name": "daiyi",
+    "email": "daiyitastic@gmail.com",
+    "url": "http://daiyi.co"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daiyitastic/dihedral-theme"
+  },
+  "devDependencies": {
+    "beepbeep": "^1.2.0",
+    "gulp": "~3.9.0",
+    "gulp-notify": "~2.2.0",
+    "gulp-plumber": "~1.0.1",
+    "gulp-sass": "~2.1.1",
+    "gulp-shell": "~0.5.1",
+    "gulp-util": "~3.0.7",
+    "rimraf": "^2.5.0"
+  },
+  "license": "GPL-3.0"
+}
