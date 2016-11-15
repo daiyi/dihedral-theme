@@ -1,0 +1,88 @@
+$base_color: #404040;
+$text_color: #D3D3D3;
+$bg_color: #2f2f2f;
+$fg_color: #D3D3D3;
+
+$selected_fg_color: #ffffff;
+$selected_bg_color: #8fa876;
+$selected_borders_color: darken($selected_bg_color, 20%);
+$borders_color: darken($bg_color, 6%);
+
+$link_color: lighten($selected_bg_color,20%);
+$link_visited_color: lighten($selected_bg_color,10%);
+
+$selection_mode_bg: if($transparency == 'true', transparentize($selected_bg_color, 0.05), $selected_bg_color);
+$warning_color: #F27835;
+$error_color: #FC4138;
+$success_color: #73d216;
+$destructive_color: #F04A50;
+$suggested_color: #4DADD4;
+
+//insensitive state derived colors
+$insensitive_fg_color: transparentize($fg_color, 0.55));
+$insensitive_bg_color: lighten($bg_color, 2%));
+
+$header_bg: red;
+@if($transparency=='true', $header_bg: transparentize(#2f343f, 0.03), $header_bg: #2f343f);
+
+$header_bg_backdrop: lighten($header_bg, 1.5%)
+
+$header_border: darken($header_bg, 4%);
+
+$header_fg: saturate(transparentize($fg_color, 0.2), 10%);
+
+$dark_sidebar_bg: if($transparency == 'true', transparentize(#353535, 0.05), #353535);
+$dark_sidebar_fg: #c3c3c3;
+$dark_sidebar_border: darken($dark_sidebar_bg, 5%);
+
+$tooltip_bg_color: #fbeaa0;
+$tooltip_fg_color: #4a4a4a;
+$tooltip_border_color: #d0d0d0;
+
+$osd_fg_color: $dark_sidebar_fg;
+$osd_bg_color: $dark_sidebar_bg;
+
+$osd_button_bg: transparentize(lighten($osd_bg_color, 22%), 0.6);
+$osd_button_border: transparentize(darken($osd_bg_color, 20%), 0.6);
+
+$osd_entry_bg: transparentize(lighten($osd_bg_color, 22%), 0.6);
+$osd_entry_border: transparentize(darken($osd_bg_color, 12%), 0.6);
+
+$osd_insensitive_bg_color: darken($osd_bg_color, 3%);
+$osd_insensitive_fg_color: mix($osd_fg_color, opacify($osd_bg_color, 1), 30%);
+$osd_borders_color: transparentize(black, 0.3);
+
+$panel_bg: #2f2f2f;
+$panel_fg: $dark_sidebar_fg;
+
+$entry_bg: lighten($base_color, 0%);
+$entry_border: darken($borders_color, 0%);
+
+$header_entry_bg: transparentize(lighten($header_bg, 22%), 0.6);
+$header_entry_border: transparentize(darken($header_bg, 12%), 0.6);
+
+$button_bg: lighten($base_color, 2%);
+$button_border: $entry_border;
+
+$header_button_bg: transparentize(lighten($header_bg, 22%), 0.6);
+$header_button_border: transparentize(darken($header_bg, 12%), 0.6);
+
+//WM Buttons
+
+// Close
+$wm_button_close_bg: #cc575d;
+$wm_button_close_hover_bg: #d7787d;
+$wm_button_close_active_bg: #be3841;
+
+$wm_icon_close_bg: #2f343f;
+
+// Minimize, Maximize
+$wm_button_hover_bg: #454C5C;
+$wm_button_active_bg: $selected_bg_color;
+
+$wm_button_hover_border: #262932;
+
+$wm_icon_bg: #90939B;
+$wm_icon_unfocused_bg: #666A74;
+$wm_icon_hover_bg: #C4C7CC;
+$wm_icon_active_bg: $selected_fg_color;
