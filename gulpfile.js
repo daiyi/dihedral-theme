@@ -10,7 +10,7 @@ var gulp        = require("gulp"),
 
 
 var themesDir   = process.env.HOME+"/.themes/",
-    theme       = "dihedral";
+    themeName   = "dihedral";
 
 
 // Error handler
@@ -34,17 +34,17 @@ var onError = function (err) {
 
 // Compile sass
 gulp.task("sass", function () {
-    return gulp.src("sass/cinnamon.scss")
+    return gulp.src("src/cinnamon.scss")
         .pipe(plumber({ errorHandler: onError }))
         .pipe(sass({ outputStyle: "expanded" }))
-        .pipe(gulp.dest("."));
+        .pipe(gulp.dest(themeName + "/cinnamon/"));
 });
 
 
 // Wait for sass to compile & reload theme
 gulp.task("reloadTheme", ["sass"], shell.task([
     "gsettings set org.cinnamon.theme name default",
-    "gsettings set org.cinnamon.theme name "+theme
+    "gsettings set org.cinnamon.theme name " + themeName
 ]));
 
 
@@ -62,10 +62,10 @@ gulp.task("install", function () {
     // Check whether the theme dir/file exists in ".themes"
     // If it does exist, remove it
     try {
-        if( fs.lstatSync(themesDir+theme).isDirectory() ||
-            fs.lstatSync(themesDir+theme).isFile() ) {
+        if( fs.lstatSync(themesDir+themeName).isDirectory() ||
+            fs.lstatSync(themesDir+themeName).isFile() ) {
 
-            rimraf.sync(themesDir+theme);
+            rimraf.sync(themesDir+themeName);
         }
     } catch (err) {
         if (err.code !== "ENOENT") throw err;
@@ -74,18 +74,18 @@ gulp.task("install", function () {
 
     // Create/update the link
     try {
-        fs.unlinkSync(themesDir+theme);
+        fs.unlinkSync(themesDir+themeName);
     } catch (err) {
         if (err.code !== "ENOENT") throw err;
     }
 
-    fs.symlinkSync(__dirname+"/../../"+theme, themesDir+theme);
+    fs.symlinkSync(__dirname + "/" + themeName, themesDir + themeName);
 });
 
 
 // Watch
 gulp.task("watch", function () {
-    gulp.watch(["sass/**/*"], ["reloadTheme"]);
+    gulp.watch(["src/*"], ["reloadTheme"]);
 });
 
 
