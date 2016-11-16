@@ -26,6 +26,10 @@ Edit the `.scss` files in `/src`, or the assets in `/dihedral/cinnamon`.
 
 let me know if these instructions are confusing and I'll write out something more detailed, I'm pretty much expecting to be shouting out into the void now :D
 
+### dev notes
+
+* can't set `border-{direction}`. it doesn't render unless you also have `box-shadow`, or you can set border and remove the directions you don't have one by one. why???
+
 #### creds
 
 this is a fork of [mint-y-dark-theme](https://github.com/linuxmint/mint-y-theme). build script forked from [zagortenay333](https://github.com/zagortenay333)!
