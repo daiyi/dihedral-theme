@@ -404,11 +404,12 @@ StScrollBar {
 .popup-combobox-item { spacing: 1em; }
 
 .popup-separator-menu-item {
-  -gradient-height: 2px;
-  -gradient-start: transparent;
-  -gradient-end: transparent;
-  -margin-horizontal: 1.5em;
-  height: 1em;
+  height: 1px;
+  background: $panel_fg;
+  border: 1px $panel_gutter;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
 }
 
 .popup-alternating-menu-item:alternate {
@@ -849,7 +850,7 @@ StScrollBar {
 .calendar-nonwork-day {
   color: $fg_color;
   background-color: transparent;
-  font-weight: bold;
+  // font-weight: bold;
 }
 
 .calendar-today,
@@ -1074,7 +1075,7 @@ StScrollBar {
 
   &-label {
     font-size: 0;
-    font-weight: bold;
+    // font-weight: bold;
     color: $fg_color;
     padding-bottom: 0;
   }
@@ -1180,7 +1181,7 @@ StScrollBar {
 // On-Screen Keyboard
 //
 #keyboard {
-  background-color: $panel_bg;
+  background-color: $panel_bg_transparent;
   border-width: 0;
   border-top-width: 1px;
   border-color: transparentize(black, 0.6);
@@ -1232,14 +1233,14 @@ StScrollBar {
 //
 .menu {
   &-favorites-box {
-    // margin: auto; // NOTES no effect?
+    margin: auto;
     padding: 0;
     transition-duration: 300;
     background-color: $panel-fg;
   }
 
   &-favorites-button {
-    // padding: 10px; // NOTES no effect?
+    padding: 10px;
 
     &:hover, &:active {
       background-color: $panel_highlight;
@@ -1319,7 +1320,9 @@ StScrollBar {
     }
   }
 
-  &-selected-app-title { font-weight: bold; }
+  &-selected-app-title {
+    // font-weight: bold;
+  }
 
   &-selected-app-description { max-width: 150px; }
 
@@ -1354,7 +1357,7 @@ StScrollBar {
 //
 .info-osd {
   text-align: center;
-  font-weight: bold;
+  // font-weight: bold;
   spacing: 1em;
   padding: 16px;
   color: $fg_color;
@@ -1753,7 +1756,7 @@ StScrollBar {
   }
 
   &-label {
-    font-weight: bold;
+    font-weight: normal;
     color: transparentize($fg_color_highlight, 0.4);
 
     &:hover, .applet-box:hover > & {
@@ -1869,9 +1872,16 @@ StScrollBar {
 //
 // Notification Applet
 //
-.notification-applet-padding { padding: .5em 1em; }
+.notification-applet-padding {
+  StTable {
+    background: $test;
+  }
+  padding: .5em 1em;
+}
 
-.notification-applet-container { max-height: 100px; }
+// .notification-applet-container {
+//   max-height: 100px;
+// }
 
 //
 // Tile Preview

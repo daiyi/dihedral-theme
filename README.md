@@ -24,6 +24,8 @@ Edit the `.scss` files in `/src`, or the assets in `/dihedral/cinnamon`.
 
 * `_drawing.scss` Drawing helper mixins/functions to allow for easier definition of widget drawing
 
+Use `looking-glass` to inspect DOM elements!! (`cinnamon-looking-glass` or `alt+F2 lg`)
+
 let me know if these instructions are confusing and I'll write out something more detailed, I'm pretty much expecting to be shouting out into the void now :D
 
 ### dev notes

@@ -437,11 +437,12 @@ StScrollBar StButton#vhandle:hover, StScrollBar StButton#vhandle:active, StScrol
 }
 
 .popup-separator-menu-item {
-  -gradient-height: 2px;
-  -gradient-start: transparent;
-  -gradient-end: transparent;
-  -margin-horizontal: 1.5em;
-  height: 1em;
+  height: 1px;
+  background: #1e1d21;
+  border: 1px #0e0d0f;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
 }
 
 .popup-alternating-menu-item:alternate {
@@ -938,7 +939,6 @@ StScrollBar StButton#vhandle:hover, StScrollBar StButton#vhandle:active, StScrol
 .calendar-nonwork-day {
   color: #c7c5c9;
   background-color: transparent;
-  font-weight: bold;
 }
 
 .calendar-today,
@@ -1157,7 +1157,6 @@ StScrollBar StButton#vhandle:hover, StScrollBar StButton#vhandle:active, StScrol
 
 .run-dialog-label {
   font-size: 0;
-  font-weight: bold;
   color: #c7c5c9;
   padding-bottom: 0;
 }
@@ -1289,7 +1288,7 @@ StScrollBar StButton#vhandle:hover, StScrollBar StButton#vhandle:active, StScrol
 }
 
 #keyboard {
-  background-color: #171619;
+  background-color: rgba(23, 22, 25, 0.5);
   border-width: 0;
   border-top-width: 1px;
   border-color: rgba(0, 0, 0, 0.4);
@@ -1351,9 +1350,14 @@ StScrollBar StButton#vhandle:hover, StScrollBar StButton#vhandle:active, StScrol
 }
 
 .menu-favorites-box {
+  margin: auto;
   padding: 0;
   transition-duration: 300;
   background-color: #1e1d21;
+}
+
+.menu-favorites-button {
+  padding: 10px;
 }
 
 .menu-favorites-button:hover, .menu-favorites-button:active {
@@ -1440,10 +1444,6 @@ StScrollBar StButton#vhandle:hover, StScrollBar StButton#vhandle:active, StScrol
   height: 30px;
 }
 
-.menu-selected-app-title {
-  font-weight: bold;
-}
-
 .menu-selected-app-description {
   max-width: 150px;
 }
@@ -1475,7 +1475,6 @@ StScrollBar StButton#vhandle:hover, StScrollBar StButton#vhandle:active, StScrol
 /* Context menu (at the moment only for favorites) */
 .info-osd {
   text-align: center;
-  font-weight: bold;
   spacing: 1em;
   padding: 16px;
   color: #c7c5c9;
@@ -1894,7 +1893,7 @@ StScrollBar StButton#vhandle:hover, StScrollBar StButton#vhandle:active, StScrol
 }
 
 .applet-label {
-  font-weight: bold;
+  font-weight: normal;
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -1999,8 +1998,8 @@ StScrollBar StButton#vhandle:hover, StScrollBar StButton#vhandle:active, StScrol
   padding: .5em 1em;
 }
 
-.notification-applet-container {
-  max-height: 100px;
+.notification-applet-padding StTable {
+  background: #27e10e;
 }
 
 .tile-preview {
